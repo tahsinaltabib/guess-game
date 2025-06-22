@@ -4,10 +4,12 @@ let btnone=document.querySelector(".btnone")
 let errorone = document.querySelector(".errorone")
 
 
-let playertwo=document.querySelector(".playertwo")
+let playertwo = document.querySelector(".playertwo")
+let chance = document.querySelector(".chance")
 let inputtwo=document.querySelector(".inputtwo")
 let btntwo=document.querySelector(".btntwo")
-let errortwo=document.querySelector(".errortwo")
+let errortwo = document.querySelector(".errortwo")
+let count=3
 
 
 btnone.addEventListener("click", function () {
@@ -27,6 +29,8 @@ btnone.addEventListener("click", function () {
     inputtwo.style.display="inline-block"
     btntwo.style.display="inline-block"
     errortwo.style.display = "block"
+    chance.innerHTML = `Chance:${count}`
+    
      
     playerone.style.display="none"
     inputone.style.display="none"
@@ -43,11 +47,26 @@ btntwo.addEventListener("click", function () {
   }else if (isNaN(inputtwo.value)) {
     errortwo.innerHTML = "Please give a number!";
     
-  }else if (!(inputtwo.value<=10 && inputtwo.value>1)) {
+  }else if (!(inputtwo.value<=10 && inputtwo.value>0)) {
     errortwo.innerHTML = "Please give a number from 1 to 10!";
     
   } else {
-    console.log("Game start from here!");
-    
+
+
+    if (count > 1) {
+      count--
+      chance.innerHTML = `Chance:${count}`
+        if (inputone.value==inputtwo.value) {
+             playertwo.innerHTML="Player two winner!";
+             btntwo.style.display = "none"   
+             inputtwo.value=""
+       }
+    } else {
+      count = 0
+      chance.innerHTML=`Chance: ${count}`
+            playertwo.innerHTML="Player one winner!";
+            btntwo.style.display = "none"
+            inputtwo.value=""
+    }
   }
 })
