@@ -1,19 +1,57 @@
-
+body{
+  background-image: url(../img/bg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.playerone{
+  text-align: center;
+  color: white;
+}
+.inputone{
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.btnone{
+  display: block;
+  margin-top: 10px;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
 .playertwo{
   display: none;
+  text-align: center;
+  color: white;
+}
+.chance{
+  text-align: center;
+  color: white;
 }
 .inputtwo{
   display: none;
+  margin-left: 50%;
+  transform: translate(-50%);
 }
 .btntwo{
   display: none;
+  margin-top: 10px;
+  margin-left: 50%;
+  transform: translate(-50%);
 }
 .errortwo{
   display: none;
 }
 .errorone{
   color: red;
+  display: block;
+  margin-top: 10px;
+  margin-left: 380px;
+  
 }
 .errortwo{
   color: red;
+  display: block;
+  margin-top: 10px;
+  margin-left: 380px;
 }
