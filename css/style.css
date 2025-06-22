@@ -1,0 +1,18 @@
+.playertwo{
+  display: none;
+}
+.inputtwo{
+  display: none;
+}
+.btntwo{
+  display: none;
+}
+.errortwo{
+  display: none;
+}
+.errorone{
+  color: red;
+}
+.errortwo{
+  color: red;
+}
